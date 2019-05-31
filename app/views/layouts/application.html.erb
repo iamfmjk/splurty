@@ -23,12 +23,13 @@
         </div>
         <% end %>
       </div>
-      <div class="col-4 slogan">
+      <div class="col col-sm-4 hidden-xs-down slogan">
         Splurting out unsolicited advice about entrepreneurship since 2016
       </div>
-      <div class="col-5 links">
+      <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
 <!-- Button trigger modal -->
         <%= link_to 'Contribute', '#', data: { toggle: 'modal', target: '#myModal' } %>
+        &nbsp;&nbsp;
         <%= link_to 'About', about_path %>
       </div>
     </header>
@@ -38,10 +39,10 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
-            <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
           </div>
         <%= simple_form_for Quote.new do |f| %>
 
@@ -71,6 +72,9 @@
     <%= yield %>
   </div>
 
+<br class="clear" />
+<br />
+<br />
   <div class="footer">
     <div class="container">
       <div class="row">
