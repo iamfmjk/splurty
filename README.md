@@ -1,24 +1,10 @@
-# README
+# Splurty
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Get a quote and submit your own. Built as a part of Berkeley Coding Bootcamp curriculum. 
 
-Things you may want to cover:
+**Built with:** Ruby on Rails, PostgreSQL, Bootstrap 4, Devise, Simple_form
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Key features
+* User authentication
+* Retrieve random quote from the database
+* Submit your quote
