@@ -8,3 +8,5 @@ Get a quote and submit your own. Built as a part of Berkeley Coding Bootcamp cur
 * User authentication
 * Retrieve random quote from the database
 * Submit your quote
+
+![Splurty screenshot](https://github.com/iamfmjk/splurty/blob/master/splurty.png)
