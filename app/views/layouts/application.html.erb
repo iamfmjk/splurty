@@ -4,13 +4,13 @@
     <title>Splurty</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header class="row">
+    <header class="row px-md-3">
       <div class="col-3">
         <%= link_to root_path class: 'logo' do %>
         <div class="circle">
@@ -23,10 +23,10 @@
         </div>
         <% end %>
       </div>
-      <div class="col col-sm-4 hidden-xs-down slogan">
+      <div class="col col-sm-5 hidden-xs-down slogan pt-3 my-auto">
         Splurting out unsolicited advice about entrepreneurship since 2016
       </div>
-      <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
+      <div class="col-8 text-right offset-1 mx-auto col-sm-4 links my-auto">
 <!-- Button trigger modal -->
         <%= link_to 'Contribute', '#', data: { toggle: 'modal', target: '#myModal' } %>
         &nbsp;&nbsp;&nbsp;
@@ -49,35 +49,30 @@
           <div class="modal-body">
               <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "Fear is the disease. Hustle is the antidote." %>
               <br />
-              <%= f.input :author, label: "Who is the author of the quote?", placeholder: 
+              <%= f.input :author, label: "Who is the author of the quote?", placeholder:
               "Travis Kalanick" %>
               <br />
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <%= f.submit 'Create', class: 'btn btn-danger' %>
-          </div> 
-        <% end %>          
+          </div>
+        <% end %>
         </div>
       </div>
     </div>
-
-<hr />
-
+    <hr />
     <br class="clear" />
-  <div class="container">
-    <% if flash[:error].present? %>
-    <div class="col-10 offset -1 alert alert-danger">
+    <div class="container mb-3">
+      <% if flash[:error].present? %>
+    <div class="col-10 offset-1 alert alert-danger">
       <%= flash[:error].html_safe %>
     </div>
     <% end %>
     <%= yield %>
   </div>
-
 <br class="clear" />
-<br />
-<br />
-  <div class="footer">
+  <div class="footer mt-3">
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-6">
